@@ -6,7 +6,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git url:'https://github.hpe.com/sajive-kumar/jenkins-playbook.git', branch:'main'
+        git url:'https://github.com/sajivesukumara/jenkins-playbook.git', branch:'main'
       }
     }
 
