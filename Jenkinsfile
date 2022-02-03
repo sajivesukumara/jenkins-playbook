@@ -10,6 +10,16 @@ pipeline {
       }
     }
 
+    stage('deploy using kubectl') {
+      steps {
+        container ('base') {
+          sh '''
+          kubectl apply -f nginx.yaml
+          '''
+        }
+      }
+    }
+
     stage('Deploy App') {
       steps {
         script {
